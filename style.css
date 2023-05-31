@@ -1,0 +1,252 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #FEB139;
+    padding: 2% 10%;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 400%;
+    font-weight: bolder;
+    color: #990000;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.browseOrCreate {
+    display: flex;
+    margin: 3% 0;
+    justify-content: space-between;
+    height: 9rem;
+}
+
+.create,
+.browse {
+    height: 100%;
+    width: 45%;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 10px;
+    font-family: 'Alkatra', cursive;
+    font-size: 300%;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 2%;
+}
+
+.create {
+    background-image: url(/images/foodsLeft.jpg);
+    background-position: top;
+    color: black;
+    padding-left: 13%;
+    line-height: 100%;
+}
+
+.browse {
+    background-image: url(/images/plates.jpg);
+    color: whitesmoke;
+    line-height: 80%;
+    padding-top: 2%;
+}
+
+.browse:hover,
+.create:hover {
+    transform: scale(1.1);
+}
+
+.browse:focus,
+.create:focus {
+    transform: scale(1.1);
+}
+
+.searchBar {
+    width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar input {
+    height: 3rem;
+    font-size: 200%;
+    min-width: 20rem;
+    max-width: 40rem;
+    width: 60%;
+    background-color: #F5F3C1;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.searchBtn {
+    width: max-content;
+    font-size: 150%;
+    font-family: 'Alkatra', cursive;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #C7E9B0;
+    transition: background-color 0.3s ease;
+    padding: 0 10px;
+}
+
+.searchBtn:hover {
+    cursor: pointer;
+    background-color: #B3C99C;
+}
+
+.searchBarSmall {
+    display: none;
+    width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.searchBarSmall input {
+    height: 3rem;
+    font-size: 200%;
+    width: 100%;
+    background-color: #F5F3C1;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.searchBarSmall input::placeholder {
+    opacity: 50%;
+}
+
+.searchBtnSmall {
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #C7E9B0;
+    transition: background-color 0.3s ease;
+    padding: 0 10px;
+}
+
+.searchBtnSmall:focus {
+    background-color: #B3C99C;
+}
+
+.searchBtnSmall:active {
+    background-color: #B3C99C;
+    transform: scale(1.1);
+}
+
+.topRecipesHeading {
+    font-size: 200%;
+    font-family: 'Alkatra', cursive;
+    color: #B8621B;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.topRecipes {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 3rem;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.ratedRecipes {
+    height: 7rem;
+    width: 100%;
+    background-color: #FFDB89;
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+    text-align: center;
+}
+
+.ratedRecipes:hover {
+    transform: scale(1.1);
+}
+
+.ratedRecipes:focus {
+    transform: scale(1.1);
+}
+
+.topRecipes img {
+    height: 100%;
+    width: auto;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.topRecipes p {
+    font-family: 'Alkatra', cursive;
+    font-size: 200%;
+    color: #990000;
+    margin: auto;
+}
+
+
+@media (max-width: 900px) {
+    body {
+        padding: 2% 5%;
+    }
+    
+    .title {
+        margin-bottom: 2rem;
+    }
+
+    .topRecipes {
+        grid-template-columns: auto;
+    }
+
+    .ratedRecipes {
+        height: 5rem;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .title {
+        font-size: 200%;
+    }
+
+    .browseOrCreate {
+        height: 16rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .create,
+    .browse {
+        width: 100%;
+        margin: auto;
+    }
+
+    .searchBar {
+        display: none;
+    }
+
+    .searchBarSmall {
+        display: flex;
+    }
+
+    .topRecipes p {
+        line-height: 80%;
+    }
+
+    .create:active,
+    .browse:active,
+    .ratedRecipes:active {
+        transform: scale(1.1);
+    }
+}

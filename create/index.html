@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <p class="title">Savory Secrets</p>
+
+    <header>
+        <p>Create and save your own recipe</p>
+    </header>
+
+    <form>
+        <label for="recipe-name">Recipe Name:</label><br>
+        <input type="text" id="recipe-name" name="recipe-name" required><br><br>
+
+        <label for="recipe-ingredients">Recipe Ingredients:</label><br>
+        <table id="ingredients-table">
+            <tr>
+                <th>Ingredient</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td class="ingredientInput"><input type="text" name="ingredient[]" required></td>
+                <td class="quantityInput"><input type="number" name="quantity[]" required></td>
+                <td>
+                    <select class="unitSelect" name="unit[]" required>
+                        <option value="">Select Unit</option>
+                        <option value="n">number</option>
+                        <option value="g">g</option>
+                        <option value="ml">ml</option>
+                        <option value="tsp">tsp</option>
+                        <option value="tbsp">tbsp</option>
+                    </select>
+                </td>
+                <td><button type="button" class="delete-row-button firstBtn"><i class="fa-solid fa-minus"></i></button></td>
+            </tr>
+        </table>
+        <button type="button" id="add-row-button">Add Row</button><br><br>
+
+        <label for="recipe-instructions">Recipe Instructions:</label><br>
+        <textarea id="recipe-instructions" name="recipe-instructions" required></textarea><br>
+
+
+
+        <button class="submitBtn" type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <a href="/index.html">Go back home</a>
+        <a href="/browse/index.html">Browse more recipes</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
